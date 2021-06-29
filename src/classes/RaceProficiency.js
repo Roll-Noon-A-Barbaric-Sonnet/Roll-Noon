@@ -7,12 +7,12 @@ class RaceProficiency extends React.Component {
     return (
       <>
 
-        <Form.Group controlId="cantrip">
-          <Form.Label>Character Race</Form.Label>
+        <Form.Group controlId="proficiency">
+          <Form.Label>Proficiencies</Form.Label>
           <Form.Control as="select" defaultValue="Increase an Ability">
-            <option>Cantrip</option>
-            <option>Cantrip</option>
-            <option>Cantrip</option>
+            <option>Pro</option>
+            <option>Pro</option>
+            <option>Pro</option>
           </Form.Control>
         </Form.Group>
 

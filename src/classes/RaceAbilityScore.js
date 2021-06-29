@@ -8,7 +8,7 @@ class RaceAbilityScore extends React.Component {
       <>
 
         <Form.Group controlId="abilityScore">
-          <Form.Label>Character Race</Form.Label>
+          <Form.Label>Ability Score</Form.Label>
           <Form.Control as="select" defaultValue="Increase an Ability">
             <option>Ability</option>
             <option>Ability</option>

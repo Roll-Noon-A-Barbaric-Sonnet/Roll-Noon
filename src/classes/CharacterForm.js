@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import RaceAbilityScore from './RaceAbilityScore';
-import RaceProficiecy from './RaceProficiency';
+import RaceProficiency from './RaceProficiency';
 import RaceLanguage from './RaceLanguage';
 import RaceCantrip from './RaceCantrip';
 // import Button from 'react-bootstrap/buttons';
@@ -9,7 +9,35 @@ import RaceCantrip from './RaceCantrip';
 // import Popover from 'react-bootstrap/Popover';
 // import Header from './Header.js';
 // import Footer from './Footer.js';
+
+
 class CharacterForm extends React.Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+        raceChosen: '',
+        classChosen: '',
+
+        showFeature: '',
+
+        showRaceAbilityScore: '',
+        showRaceProficiency: '',
+        showRaceLanguage:'',
+        showRaceCantrip:'',
+    }
+  }
+
+  raceHandler = (race) => {
+    this.setState({
+      raceChosen: race
+    })
+  } 
+
+  clasHandler = (clas) => {
+    this.setState({
+      classChosen: clas
+    })
+  }
 
   render() {
     return (
@@ -30,10 +58,25 @@ class CharacterForm extends React.Component {
             </Form.Control>
           </Form.Group>
 
-          <RaceAbilityScore />
-          <RaceProficiecy />
-          <RaceLanguage />
-          <RaceCantrip />
+        {
+          this.state.showRaceAbilityScore ?
+          <RaceAbilityScore /> : ''
+        }
+
+        {
+          this.state.showRaceProficiency ?
+          <RaceProficiency /> : ''
+        }
+
+        {
+          this.state.showRaceLanguage ?
+          <RaceLanguage /> : ''
+        }
+
+        {
+          this.state.showRaceCantrip ?
+          <RaceCantrip /> : ''
+        }
 
         </Form>
 
