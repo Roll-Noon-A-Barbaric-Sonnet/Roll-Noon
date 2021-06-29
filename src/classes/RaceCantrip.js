@@ -8,8 +8,8 @@ class RaceCantrip extends React.Component {
       <>
 
         <Form.Group controlId="cantrip">
-          <Form.Label>Character Race</Form.Label>
-          <Form.Control as="select" defaultValue="Increase an Ability">
+          <Form.Label>Cantrips</Form.Label>
+          <Form.Control as="select" defaultValue="Choose a cantrip">
             <option>Cantrip</option>
             <option>Cantrip</option>
             <option>Cantrip</option>

@@ -7,12 +7,12 @@ class RaceLanguage extends React.Component {
     return (
       <>
 
-        <Form.Group controlId="cantrip">
-          <Form.Label>Character Race</Form.Label>
-          <Form.Control as="select" defaultValue="Increase an Ability">
-            <option>Cantrip</option>
-            <option>Cantrip</option>
-            <option>Cantrip</option>
+        <Form.Group controlId="language">
+          <Form.Label>Languages</Form.Label>
+          <Form.Control as="select" defaultValue="Choose a language">
+            <option>Common</option>
+            <option>Infernal</option>
+            <option>Dwarvish</option>
           </Form.Control>
         </Form.Group>
 
