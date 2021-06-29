@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
+import CharacterCard from './CharacterCard.js';
 // import Button from 'react-bootstrap/buttons';
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import Popover from 'react-bootstrap/Popover';
@@ -62,7 +63,7 @@ class CharacterForm extends React.Component {
             </Form.Control>
           </Form.Group>
         </Form>
-
+      
       </>
     );
   }
