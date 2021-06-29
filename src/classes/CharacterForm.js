@@ -63,7 +63,7 @@ class CharacterForm extends React.Component {
             </Form.Control>
           </Form.Group>
         </Form>
-      
+  
       </>
     );
   }
