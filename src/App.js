@@ -1,8 +1,12 @@
 import './css/App.css';
 import React from 'react';
 import CharacterForm from './classes/CharacterForm';
+
 import Navbar from './classes/Navbar';
 // import { Auth0Provider } from "@auth0/auth0-react";
+
+
+
 class App extends React.Component {
 
   render() {

@@ -1,9 +1,11 @@
 import React from 'react';
+
 import Form from 'react-bootstrap/Form';
 import RaceAbilityScore from './RaceAbilityScore';
 import RaceProficiency from './RaceProficiency';
 import RaceLanguage from './RaceLanguage';
 import RaceCantrip from './RaceCantrip';
+
 // import Button from 'react-bootstrap/buttons';
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import Popover from 'react-bootstrap/Popover';
@@ -121,7 +123,7 @@ class CharacterForm extends React.Component {
           </Form.Group>
 
         </Form>
-
+      
       </>
     );
   }
