@@ -1,6 +1,7 @@
 import './css/App.css';
 import React from 'react';
 import CharacterForm from './classes/CharacterForm';
+
 class App extends React.Component {
 
   render() {

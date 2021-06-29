@@ -1,0 +1,25 @@
+.vButton{
+margin-top: 15px;
+margin-left: 25%;
+
+
+}
+.edButtons{
+
+margin-top: 15px;
+margin-left: 25px;
+border-radius: 100px;
+border: black;
+}
+
+.cardText{
+
+text-align: center;
+border-radius: 100px;
+border: black;
+}
+#blah{
+
+  border-radius: 100px;
+  border: black;
+}
