@@ -155,7 +155,7 @@ class CharacterForm extends React.Component {
           </Form.Group>
 
         </Form>
-      
+  
       </>
     );
   }

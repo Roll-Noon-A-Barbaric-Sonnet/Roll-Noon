@@ -1,25 +1,123 @@
-.vButton{
-margin-top: 15px;
-margin-left: 25%;
 
-
-}
-.edButtons{
-
-margin-top: 15px;
-margin-left: 25px;
-border-radius: 100px;
-border: black;
-}
 
 .cardText{
 
 text-align: center;
-border-radius: 100px;
+
 border: black;
 }
 #blah{
 
-  border-radius: 100px;
+ border-radius: 10px;
   border: black;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+.btn-outline {
+  font-weight: bold;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 2px;
+  padding: 0;
+  outline: 0;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+  
+  transition: all 300ms ease-in-out;
+}
+.btn-outline i,
+.btn-outline span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0.3rem;
+  margin: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  
+}
+.btn-outline i {
+  margin-left: -100%;
+  transition: margin-left 300ms ease-in-out;
+  margin-top: 5%;
+}
+.btn-outline:hover {
+  color: #ffffff;
+  background-color: #404040;
+}
+.btn-outline:hover i {
+  margin-left: 0;
+}
+
+
+.btn-outline.primary {
+  color: #3EB1DE;
+  border-color: #3EB1DE;
+}
+.btn-outline.primary:hover {
+  color: #ffffff;
+  background-color: #3EB1DE;
+}
+.btn-outline.primary:focus {
+  box-shadow: 0 0 0 0.3rem rgba(20, 137, 255, 0.7);
+}
+
+.btn-outline.success {
+  color: #ffd43b;
+  border-color: #ffd43b;
+}
+.btn-outline.success:hover {
+  color: #ffffff;
+  background-color: #ffd43b;
+}
+.btn-outline.success:focus {
+  box-shadow: 0 0 0 0.3rem #ffd43b;
+}
+.btn-outline.success.btn-outline-small:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 206, 13, 0.7);
+}
+.btn-outline.success.btn-outline-large:focus {
+  box-shadow: 0 0 0 0.4rem rgba(0, 206, 13, 0.7);
+}
+.btn-outline.warning {
+  color: #f1da19;
+  border-color: #f1da19;
+}
+.btn-outline.warning:hover {
+  color: #ffffff;
+  background-color: #f1da19;
+}
+.btn-outline.warning:focus {
+  box-shadow: 0 0 0 0.3rem rgba(241, 218, 25, 0.7);
+}
+
+.btn-outline.danger {
+  color: #cd222b;
+  border-color: #cd222b;
+}
+.btn-outline.danger:hover {
+  color: #ffffff;
+  background-color: #cd222b;
+}
+.btn-outline.danger:focus {
+  box-shadow: 0 0 0 0.3rem #cd222b;
+}
+
+
+
+#vedbuttonsOuter{
+
+display: flex;
+justify-content: space-between;
+}
+
+span.span{
+
+  width: 75px;
+  margin: auto;
+
+ }
+.form-file{
+   margin-left: 125px;
+ }

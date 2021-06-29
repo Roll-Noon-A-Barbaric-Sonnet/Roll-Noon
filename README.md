@@ -13,6 +13,7 @@ Roll-Noon makes it easy for you to create, customize, and store your D&D 5e char
 # Resources
 Built with [React.js](https://reactjs.org/) & [React-bootstrap](https://react-bootstrap.github.io/) </br>
 API from [D&D 5th Edition API](http://www.dnd5eapi.co/)</br>
+Button Design from [Freefrontend.com](https://freefrontend.com/css-buttons/)
 Using:
 - [auth0](https://auth0.com/docs)
 - [dotenv](https://www.npmjs.com/package/dotenv)
