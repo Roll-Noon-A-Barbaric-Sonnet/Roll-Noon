@@ -16,7 +16,14 @@ class CharacterForm extends React.Component {
         showForm2: false
     };
   };
+  formTwoSubmit = async (e) => {
+    e.preventDefault();
+    console.log(e.target)
 
+
+
+
+  }
 
   raceClassHandler = async (e) => {
     e.preventDefault();
@@ -28,7 +35,7 @@ class CharacterForm extends React.Component {
     charData[2].forEach(choice=>{
       choices.push(<OptionSelect choiceType = {choice.type} options={choice.from}/>);
     });
-
+//form 3 
     this.setState({
       formOneData: charData,
       formTwoOptions: choices,
@@ -74,9 +81,9 @@ class CharacterForm extends React.Component {
           <Button type='submit'>Submit</Button>
         </Form>:<></>}
         {this.state.showForm2?
-        <Form>
+        <Form onSubmit={this.formTwoSubmit}>
           {this.state.formTwoOptions}
-          
+          <Button type='submit'>Next</Button>
         </Form>
         :<></>}
         <Form>
