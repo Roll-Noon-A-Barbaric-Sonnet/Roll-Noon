@@ -1,10 +1,6 @@
 import React from 'react';
-
 import Form from 'react-bootstrap/Form';
-import RaceAbilityScore from './RaceAbilityScore';
-import RaceProficiency from './RaceProficiency';
-import RaceLanguage from './RaceLanguage';
-import RaceCantrip from './RaceCantrip';
+import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
 // import Button from 'react-bootstrap/buttons';
@@ -14,9 +10,7 @@ import axios from 'axios';
 // import Footer from './Footer.js';
 
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
-
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
-
 
 
 class CharacterForm extends React.Component {
@@ -37,81 +31,32 @@ class CharacterForm extends React.Component {
     }
   }
 
-  // let charData = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/formone?race=${raceChosen}&charclass=${classChosen}`);
-
-
-  raceHandler = (race) => {
-    this.setState({
-      raceChosen: race
-    })
-  } 
-
-  classHandler = (clas) => {
-    this.setState({
-      classChosen: clas
-    })
-  }
-
-  charRaceOnChange = (e) => {
+  raceClassHandler = async (e) => {
     e.preventDefault();
-    let chosenR = e.target.value;
-    console.log(chosenR);
-    this.raceHandler(chosenR);
-  }
+    console.log(e.target);
+    // raceChosen = e.target.characterRace.value;
+    // classChosen = e.target.characterClass.value;
+    // let mail = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/formone?race=${raceChosen}&charclass=${classChosen}`);
+    // let charData = mail.data;
 
-  charClassOnChange = (e) => {
-    e.preventDefault();
-    let chosenC = e.target.value;
-    console.log(chosenC);
-    this.classHandler(chosenC);
   }
-
   
-
   render() {
     return (
       <>
-        {//This is the start of the Character Creation Form With many modifiers.
-        }
-        <Form>
+        <Form onSubmit={this.raceClassHandler}>
           <Form.Group controlId="characterName">
+            <Form.Label>Character Name</Form.Label>
             <Form.Control type="text" placeholder="Enter your character's name" />
           </Form.Group>
 
           <Form.Group controlId='characterRace'>
-            <Form.Control as="select" onChange={this.charRaceOnChange} >
+            <Form.Label>Character Race</Form.Label>
+            <Form.Control as="select">
               <option value='0'>Choose a race</option>
-              {
-                races.map( race => 
-                  <option key={race} value={race.toLowerCase()}>{race}</option>
-                )
-              }
+              {races.map(race => <option key={race} value={race.toLowerCase()}>{race}</option>)}
             </Form.Control>
           </Form.Group>
-
-        {
-          this.state.showRaceAbilityScore ?
-          <RaceAbilityScore /> : ''
-        }
-
-        {
-          this.state.showRaceProficiency ?
-          <RaceProficiency /> : ''
-        }
-
-        {
-          this.state.showRaceLanguage ?
-          <RaceLanguage /> : ''
-        }
-
-        {
-          this.state.showRaceCantrip ?
-          <RaceCantrip /> : ''
-        }
-
-        </Form>
-
-        <Form>
 
           <Form.Group controlId="characterClass">
             <Form.Label>Character Class</Form.Label>
@@ -124,11 +69,10 @@ class CharacterForm extends React.Component {
               }
             </Form.Control>
           </Form.Group>
-
+          <Button type='submit'>Submit</Button>
         </Form>
 
         <Form>
-
           <Form.Group controlId="characterDescription">
             <Form.Label></Form.Label>
             <Form.Control as="textarea" rows={3} placeholder="Describe your character." />
