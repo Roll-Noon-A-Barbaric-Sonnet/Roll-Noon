@@ -19,7 +19,7 @@ class App extends React.Component {
         <Header />
           
         <Switch>
-          {/* <Route path='/'></Route> */}
+          <Route exact path='/'></Route>
           <Route path='/selector'>
           <CharacterMenu/>
           </Route>
