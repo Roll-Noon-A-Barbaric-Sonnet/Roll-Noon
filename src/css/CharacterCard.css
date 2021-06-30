@@ -74,12 +74,7 @@ border: black;
 .btn-outline.success:focus {
   box-shadow: 0 0 0 0.3rem #ffd43b;
 }
-.btn-outline.success.btn-outline-small:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 206, 13, 0.7);
-}
-.btn-outline.success.btn-outline-large:focus {
-  box-shadow: 0 0 0 0.4rem rgba(0, 206, 13, 0.7);
-}
+
 .btn-outline.warning {
   color: #f1da19;
   border-color: #f1da19;
@@ -121,3 +116,5 @@ span.span{
 .form-file{
    margin-left: 125px;
  }
+
+ 

@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import LoginButton from './LogInButton';
 import LogoutButton from './LogoutButton';
-
+import '../css/Navbar.css';
+import '../css/LoginButton.css';
+import '../css/LogoutButton.css';
 class Navbar extends React.Component {
   makeRequest = async() =>{
     const {getIdTokenClaims} = this.props.auth0;
@@ -23,10 +25,12 @@ class Navbar extends React.Component {
 
     return (
     <>
-      <h1>Navbar</h1>
+      <h1>Welcome To Character Sonnet</h1>
 
         <LoginButton /> 
         <LogoutButton />
+
+       
 
     </>
     );
