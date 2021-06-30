@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+
 import '../css/CharacterCard.css';
 import Form from 'react-bootstrap/Form'
 
