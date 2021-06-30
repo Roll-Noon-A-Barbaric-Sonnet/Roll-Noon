@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import LoginButton from './LogInButton';
 import LogoutButton from './LogoutButton';
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
   makeRequest = async() =>{
@@ -24,7 +25,8 @@ class Navbar extends React.Component {
     return (
     <>
       <h1>Navbar</h1>
-
+      <Link to="/builder" >Character Builder</Link>
+      <Link to='/selector'>Character Selector</Link>
         <LoginButton /> 
         <LogoutButton />
 
