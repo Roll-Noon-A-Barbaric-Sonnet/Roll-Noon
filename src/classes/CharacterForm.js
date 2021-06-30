@@ -5,10 +5,6 @@ import axios from 'axios';
 import OptionSelect from './OptionSelect';
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
-const weapons = {
-  simples: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Crossbow, light", "Dart", "Shortbow", "Sling"],
-  martials: ["Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "War pick", "Warhammer", "Whip", "Blowgun", "Crossbow, hand", "Crossbow, heavy", "Longbow", "Net"]
-};
 
 class CharacterForm extends React.Component {
   constructor(props) {
@@ -21,9 +17,6 @@ class CharacterForm extends React.Component {
     };
   };
 
-  processEquipment = equipChoice => {
-    
-  }
 
   raceClassHandler = async (e) => {
     e.preventDefault();
@@ -33,13 +26,7 @@ class CharacterForm extends React.Component {
     let charData = mail.data;
     let choices = []
     charData[2].forEach(choice=>{
-      if (choice.type!='equipment') {
-        for (let i=0;i<choice.choose;i++) {
-          choices.push(<OptionSelect choiceType = {choice.type} options={choice.from}/>);
-        };
-      } else {
-
-      }
+      choices.push(<OptionSelect choiceType = {choice.type} options={choice.from}/>);
     });
 
     this.setState({
