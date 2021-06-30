@@ -3,6 +3,9 @@ import axios from 'axios';
 import LoginButton from './LogInButton';
 import LogoutButton from './LogoutButton';
 import { Link } from 'react-router-dom';
+import '../css/Navbar.css';
+import '../css/LoginButton.css';
+import '../css/LogoutButton.css';
 
 class Navbar extends React.Component {
   makeRequest = async() =>{
@@ -24,12 +27,11 @@ class Navbar extends React.Component {
 
     return (
     <>
-      <h1>Navbar</h1>
+      <h1>Welcome To Character Sonnet</h1>
       <Link to="/builder" >Character Builder</Link>
       <Link to='/selector'>Character Selector</Link>
         <LoginButton /> 
         <LogoutButton />
-
     </>
     );
   }
