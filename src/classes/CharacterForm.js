@@ -76,6 +76,7 @@ class CharacterForm extends React.Component {
         {this.state.showForm2?
         <Form>
           {this.state.formTwoOptions}
+          
         </Form>
         :<></>}
         <Form>
