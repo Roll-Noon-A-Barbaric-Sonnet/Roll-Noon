@@ -19,7 +19,7 @@ class App extends React.Component {
         <Header />
           <h1>Welcome To Character Sonnet Front End</h1>
         <Switch>
-          {/* <Route path='/'></Route> */}
+          <Route exact path='/'></Route>
           <Route path='/selector'>
           <CharacterMenu/>
           </Route>
