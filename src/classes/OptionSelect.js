@@ -12,6 +12,8 @@ class OptionSelect extends React.Component {
             {this.props.options.map(option => {
               if(option.equipment){
                 return <option value={option} key={option.equipment.index}>{option.equipment.name}</option>               
+              } else if (option.ability_score) {
+                return <option value={option} key={option.ability_score.index}>{option.ability_score.name}</option>
               } else {
                 return <option value={option} key={option.index}>{option.name}</option>
               };
