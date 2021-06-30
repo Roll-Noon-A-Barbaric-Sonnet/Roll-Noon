@@ -4,7 +4,7 @@ import CharacterForm from './classes/CharacterForm';
 
 import CharacterMenu from './classes/CharacterMenu';
 
-import Navbar from './classes/Navbar';
+import Header from './classes/Header.js';
 // import { Auth0Provider } from "@auth0/auth0-react";
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        <Header />
         <h1>Welcome To Character Sonnet Front End</h1>
         <CharacterForm />
         <CharacterMenu/>
