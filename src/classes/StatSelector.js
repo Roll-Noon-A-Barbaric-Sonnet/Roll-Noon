@@ -8,6 +8,7 @@ constructor(props) {
   this.state = {
     standardArray: [8,10,12,13,14,15],
     validStats: [8,10,12,13,14,15],
+    //These are the stats we will submit.
     str: 0,
     dex: 0,
     con: 0,
@@ -17,6 +18,7 @@ constructor(props) {
   }
 }
 
+// Halndlers for each input box
 strHandler = e => {
   console.log(e.target.value)
   this.setState({str: e.target.value})
@@ -75,9 +77,11 @@ chaHandler = e => {
 
 handleSubmit = e => {}
 
+//resets stats to 0, resets validStats arr
 resetStats = e => {
   e.preventDefault();
   this.setState({validStats: [8,10,12,13,14,15]})
+  this.setState({str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0})
 }
 
   render () {
