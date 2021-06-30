@@ -9,6 +9,8 @@ class CharacterCard extends React.Component {
   render() {
     return (
 
+      //Css for character card position is in the index.css
+
       //Stretch Goal Make Classes Change Border Color maybe background color? who knows
 
       <Card id="blah" border={'warning'} bg={'light'} style={{ width: '500px' }}>
@@ -35,7 +37,7 @@ class CharacterCard extends React.Component {
           <br/>
           <Form>
             <Form.Group>
-              <Form.File id="exampleFormControlFile1" label="Upload Your Character's Picture" />
+              <Form.File id="characterPic" label="Upload Your Character's Picture" />
             </Form.Group>
           </Form>
         </Card.Body>

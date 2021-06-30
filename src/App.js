@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-          <h1>Welcome To Character Sonnet Front End</h1>
+          
         <Switch>
           {/* <Route path='/'></Route> */}
           <Route path='/selector'>
