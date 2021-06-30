@@ -1,18 +1,18 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 
-class RaceAbilityScore extends React.Component {
+class optionSelect extends React.Component {
 
   render() {
     return (
       <>
 
-        <Form.Group controlId="abilityScore">
-          <Form.Label>Ability Score</Form.Label>
-          <Form.Control as="select" defaultValue="Increase an Ability">
-            <option>Ability</option>
-            <option>Ability</option>
-            <option>Ability</option>
+        <Form.Group controlId={this.props.index}>
+          <Form.Label>{this.props.choiceType}</Form.Label>
+          <Form.Control as="select" defaultValue={`Choose ${this.props.choiceType}`}>
+            {this.props.options.map(option =>{
+              <option value={option.index} key={option.index}>{option.name}</option>
+            })}
           </Form.Control>
         </Form.Group>
 
@@ -21,4 +21,4 @@ class RaceAbilityScore extends React.Component {
   }
 }
 
-export default RaceAbilityScore;
+export default optionSelect;
