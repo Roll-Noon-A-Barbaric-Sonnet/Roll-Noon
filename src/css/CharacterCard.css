@@ -1,16 +1,13 @@
-
-
-.cardText{
-
-text-align: center;
-
-border: black;
-}
-#blah{
-
+#mainCard{
  border-radius: 10px;
   border: black;
 }
+
+.cardText{
+text-align: center;
+border: black;
+}
+
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 .btn-outline {

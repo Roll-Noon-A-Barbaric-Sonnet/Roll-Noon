@@ -3,6 +3,8 @@ import axios from 'axios';
 import LoginButton from './LogInButton';
 import LogoutButton from './LogoutButton';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import '../css/index.css'
 import '../css/Navbar.css';
 import '../css/LoginButton.css';
 import '../css/LogoutButton.css';
@@ -26,21 +28,18 @@ class Navbar extends React.Component {
     // const { isAuthenticated } = this.props.auth0;
 
     return (
-      <>
-        <h1>Welcome To Character Sonnet</h1>
-       
-        <Link to="/builder" >
-          <button class ="builderSelector" type="button">Character Builder</button>
-        </Link>
-
-        <Link to='/selector'>
-          <button class ="builderSelector">Character Selector</button>
-        </Link>
-        
-        <LoginButton />
-        <LogoutButton />
-
-      </>
+      <nav id='mainNav'>
+        <div id='navButtons'>
+          <Link to='/selector'>
+            <Button className="builderSelector">My Characters</Button>
+          </Link>
+          <LoginButton />
+          <LogoutButton />
+          <Link to="/builder" >
+            <Button className="builderSelector" type="button">+ New Character</Button>
+          </Link>
+        </div>
+      </nav>
     );
   }
 }
