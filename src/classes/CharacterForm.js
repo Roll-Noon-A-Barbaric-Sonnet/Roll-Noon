@@ -17,26 +17,10 @@ class CharacterForm extends React.Component {
       showForm2: false,
       showForm3: false,
       numOfOptions: 0,
-      form2Result: []    
+      form2Result: [],
+      form3Result: []    
     };
   };
-  formTwoSubmit = async (e) => {
-    e.preventDefault();
-    let charData = this.state.formOneData;
-    let choiceData = {};
-    for (let i = 0; i < this.state.numOfOptions; i++) {
-      
-      choiceData[i] = charData[2][i].from[e.target[i].value];
-    }
-
-    charData.push(choiceData);
-    this.setState({
-      showForm1: false,
-      showForm2: false,
-      showForm3: true,
-      form2Result: charData, 
-    })
-  }
 
   raceClassHandler = async (e) => {
     e.preventDefault();
@@ -55,10 +39,31 @@ class CharacterForm extends React.Component {
       showForm2: true,
       numOfOptions: charData[2].length
     });
-
   };
 
+  formTwoSubmit = async (e) => {
+    e.preventDefault();
+    let charData = this.state.formOneData;
+    let choiceData = {};
+    for (let i = 0; i < this.state.numOfOptions; i++) {
+      choiceData[i] = charData[2][i].from[e.target[i].value];
+    }
+    charData.push(choiceData);
+    this.setState({
+      showForm1: false,
+      showForm2: false,
+      showForm3: true,
+      form2Result: charData 
+    })
+  }
+
+  formThreeComplete = async (stats,profs) => {
+    let submission = this.state.form2Result;
+
+  } 
+
   render() {
+
     return (
       <>
         {this.state.showForm1 ? <Form onSubmit={this.raceClassHandler}>
@@ -86,7 +91,6 @@ class CharacterForm extends React.Component {
               }
             </Form.Control>
           </Form.Group>
-          {/* Level Select Here! */}
           <Form.Group controlId="characterDescription">
             <Form.Label>Description:</Form.Label>
             <Form.Control as="textarea" rows={3} placeholder="Describe your character." />
@@ -99,14 +103,7 @@ class CharacterForm extends React.Component {
             <Button type='submit'>Next</Button>
           </Form>
           : <></>}
-        
-        {this.state.showForm3 ?
-          <Form onSubmit={this.formThreeSubmit}>
-            <RadioStats/>
-            <Button type='submit'>Finish and Save</Button>
-          </Form>
-          : <></>}
-       
+        {this.state.showForm3?<RadioStats finish={this.formThreeComplete}/>:<></>}
       </>
     );
   };
