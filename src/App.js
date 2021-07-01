@@ -3,7 +3,6 @@ import React from 'react';
 import CharacterForm from './classes/CharacterForm';
 import CharacterMenu from './classes/CharacterMenu';
 import Header from './classes/Header';
-import RadioStats from './classes/RadioStats';
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,7 +27,6 @@ class App extends React.Component {
           <CharacterForm />
           </Route>
         </Switch>
-        <RadioStats/>
       </Router>
     );
   }

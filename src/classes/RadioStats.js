@@ -8,7 +8,6 @@ class RadioStats extends React.Component {
     this.state = {
       queryArray: [8,10,12,13,14,15],
       stats: ['','','','','','']
-
     };
   };
   
