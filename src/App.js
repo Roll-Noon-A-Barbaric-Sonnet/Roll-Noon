@@ -1,8 +1,9 @@
-import './css/App.css';
+// import './css/index.css';
 import React from 'react';
 import CharacterForm from './classes/CharacterForm';
 import CharacterMenu from './classes/CharacterMenu';
 import Header from './classes/Header';
+import Footer from './classes/Footer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,16 +18,20 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-          
+        <main id='mainBody'>
         <Switch>
           <Route exact path='/'></Route>
           <Route path='/selector'>
-          <CharacterMenu/>
+            <article id='mainArticle'>
+            <CharacterMenu />
+            </article>
           </Route>
           <Route path='/builder'>
-          <CharacterForm />
+            <CharacterForm />
           </Route>
         </Switch>
+        </main>
+        <Footer />
       </Router>
     );
   }

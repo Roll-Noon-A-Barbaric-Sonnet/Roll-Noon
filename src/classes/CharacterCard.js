@@ -12,12 +12,11 @@ class CharacterCard extends React.Component {
       //Css for character card position is in the index.css
 
       //Stretch Goal Make Classes Change Border Color maybe background color? who knows
-
-      <Card id="blah" border={'warning'} bg={'light'} style={{ width: '500px' }}>
+      <Card id="mainCard" border={'warning'} bg={'light'} style={{ width: '500px' }}>
         <Card.Img variant="top" src="" />
 
         <Card.Body>
-         
+
           <Card.Title className='cardText'>{/*Enter Custom User Name from earlier in form*/}Character Name here</Card.Title>
           <Card.Text className='cardText'>
             Character Race Here | Character Level Here | Character Class Here
@@ -32,9 +31,9 @@ class CharacterCard extends React.Component {
             <button class='vedbutton' class="btn-outline danger"><i class="fas fa-times-circle"></i><span class="span">Delete</span></button>
 
           </div>
-         {//Upload Character Image
+          {//Upload Character Image
           }
-          <br/>
+          <br />
           <Form>
             <Form.Group>
               <Form.File id="characterPic" label="Upload Your Character's Picture" />
@@ -42,8 +41,6 @@ class CharacterCard extends React.Component {
           </Form>
         </Card.Body>
       </Card>
-      
-
     )
   }
 }

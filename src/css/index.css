@@ -1,27 +1,200 @@
-/* body {
+/* ------------ General Body Styling ------------ */
+
+
+body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100vh;
+  width: auto;
+  /* background: rgb(224,217,201);
+  background: radial-gradient(circle, rgba(224,217,201,1) 62%, rgba(215,202,170,1) 100%); */
+  background: rgb(100,132,159);
+  background: radial-gradient(circle, rgba(100,132,159,1) 15%, rgba(41,58,71,1) 100%);
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 } */
-body{
-  background-color: rgb(241, 219, 194);
-}
-.card{
- 
 
-  position: absolute;
-  left: 50%;
+
+/* ------------- Header Styling ------------ */
+
+
+#mainHeader {
+
+}
+
+#mainTitle {
+  width: fit-content;
+  margin: .5em auto 0px auto;
+  font-size: 3.5em;
+  transition: 500ms;
+  font-family: 'Almendra', serif;
+  text-align: center;
+  color: #9f2a2d;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#mainTitle:hover {
+  transition: 500ms ease;
+  color: black;
+  text-shadow: #260707c3 1.5px 1.5px 5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#mainSubTitle{
+  width: fit-content;
+  margin: 0px auto 1em auto;
+  font-size: 1em;
+  transition: 800ms;
+  font-family: 'Almendra', serif;
+  text-align: center;
+  color: #9f2a2d;
+  text-shadow: #000000c3 -.5px -.5px .5px;
+}
+
+#mainSubTitle:hover {
+  transition: 800ms ease;
+  color: black;
+  text-shadow: #000000c3 0px 0px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------- Navbar Styling ------------ */
+
+
+#mainNav {
+  padding-top: .75em;
+  padding-bottom: .75em;
+  margin: 0 auto;
+  max-width: 100%;
+  background: rgb(144,37,40);
+  background: radial-gradient(circle, rgba(144,37,40,1) 0%, rgba(105,23,26,1) 100%);
+  box-shadow: #000000c4 0px 0px 4px;
+}
+
+#navButtons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+
+/* ------------- Main Styling ------------ */
+
+
+#mainBody {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 70%;
+}
+
+#mainArticle{
+  height: 100%;
+}
+
+/* --------------- Footer Styling ---------------- */
+
+
+#mainFooter {
+  padding: 8px 0px 8px 0px;
+  margin-top: auto;
+  margin-bottom: 0;
+  height: fit-content;
+  width: 100vw;
+
+  background: rgb(144,37,40);
+  background: radial-gradient(circle, rgba(144,37,40,1) 0%, rgba(105,23,26,1) 100%);
+  /* background: rgb(224,217,201);
+  background: linear-gradient(0deg, rgba(224,217,201,1) 0%, rgba(224,217,201,1) 50%, rgba(199,186,157,1) 100%); */
+
+  display: grid;
+  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .6fr 1.5fr .5fr;
+  grid-template-rows: 1fr;
+
+  bottom: 0;
+  align-content: center;
+  justify-content: center;
+
+  box-shadow: #596468 1px 1px 4px;
+}
+
+#d20 {
+  transition: 400ms;
+  align-self: center;
+  justify-self: center;
+  color: black;
+}
+
+#d20:hover {
+  transition: 400ms;
+  color: whitesmoke;
+}
+
+#authors {
+  font-family: 'Almendra', serif;
+  align-self: center;
+  justify-self: center;
+  color: black;
+
+}
+
+#ourNames {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#team{
+  font-family: 'Open Sans', serif;
+  transition: 200ms;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0;
+  color: black;
+}
+
+#team:hover {
+  transition: 300ms;
+  color: whitesmoke;
+}
+
+#links {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ----- Character Card Styling ----- */
+
+
+.card {
+  /* left: 50%;
   margin-left: -250px;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -100px; */
+}
 
 
+/* ----- Screen Size Conditional Styling ----- */
+
+
+@media ( max-width: 700px ) {
+  body {
+    background-size: 100vh;
+  }
+
+  #mainFooter{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
 }
