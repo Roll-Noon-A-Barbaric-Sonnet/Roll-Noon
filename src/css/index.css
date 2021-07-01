@@ -1,23 +1,23 @@
 /* ------------ General Body Styling ------------ */
 
-
-body {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: auto;
-  /* background: rgb(224,217,201);
-  background: radial-gradient(circle, rgba(224,217,201,1) 62%, rgba(215,202,170,1) 100%); */
-  background: rgb(100,132,159);
-  background: radial-gradient(circle, rgba(100,132,159,1) 15%, rgba(41,58,71,1) 100%);
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* html {
+body {
+  width: auto;
+  background: rgb(100,132,159);
+  background: radial-gradient(circle, rgba(100,132,159,1) 15%, rgba(41,58,71,1) 100%);
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/* #root{
   margin: 0;
   padding: 0;
-  height: 100vh;
+  max-height: 100vh;
 } */
 
 
@@ -31,7 +31,7 @@ body {
 #mainTitle {
   width: fit-content;
   margin: .5em auto 0px auto;
-  font-size: 3.5em;
+  font-size: 5em;
   transition: 500ms;
   font-family: 'Almendra', serif;
   text-align: center;
@@ -50,7 +50,7 @@ body {
 #mainSubTitle{
   width: fit-content;
   margin: 0px auto 1em auto;
-  font-size: 1em;
+  font-size: 1.5em;
   transition: 800ms;
   font-family: 'Almendra', serif;
   text-align: center;
@@ -69,8 +69,8 @@ body {
 
 
 #mainNav {
-  padding-top: .75em;
-  padding-bottom: .75em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
   margin: 0 auto;
   max-width: 100%;
   background: rgb(144,37,40);
@@ -89,25 +89,27 @@ body {
 
 
 #mainBody {
+  /* height: 100%; */
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
   width: 70%;
 }
 
 #mainArticle{
-  height: 100%;
+
 }
 
 /* --------------- Footer Styling ---------------- */
 
 
 #mainFooter {
-  padding: 8px 0px 8px 0px;
+  padding: 24px 0px 24px 0px;
   margin-top: auto;
   margin-bottom: 0;
-  height: fit-content;
   width: 100vw;
+  /* height: fit-content; */
 
   background: rgb(144,37,40);
   background: radial-gradient(circle, rgba(144,37,40,1) 0%, rgba(105,23,26,1) 100%);
@@ -115,10 +117,10 @@ body {
   background: linear-gradient(0deg, rgba(224,217,201,1) 0%, rgba(224,217,201,1) 50%, rgba(199,186,157,1) 100%); */
 
   display: grid;
-  grid-template-columns: .5fr .5fr .5fr .5fr .5fr .6fr 1.5fr .5fr;
+  grid-template-columns: 1fr .75fr 1fr 1fr .75fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 
-  bottom: 0;
+  /* bottom: 0; */
   align-content: center;
   justify-content: center;
 
@@ -142,7 +144,10 @@ body {
   align-self: center;
   justify-self: center;
   color: black;
+}
 
+#footerAuthors{
+  font-size: 2em;
 }
 
 #ourNames {
@@ -153,7 +158,8 @@ body {
 }
 
 #team{
-  font-family: 'Open Sans', serif;
+  font-size: 1.25em;
+  font-family: 'Nanum Myeongjo', serif;
   transition: 200ms;
   text-align: center;
   text-decoration: none;
@@ -188,9 +194,9 @@ body {
 
 
 @media ( max-width: 700px ) {
-  body {
+  /* body {
     background-size: 100vh;
-  }
+  } */
 
   #mainFooter{
     display: grid;
