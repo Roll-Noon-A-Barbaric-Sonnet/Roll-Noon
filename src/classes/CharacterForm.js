@@ -23,6 +23,8 @@ class CharacterForm extends React.Component {
     };
   };
 
+  //take race and class, get base data and options from server,
+  //then format all of it and prep options for form2 
   raceClassHandler = async (e) => {
     e.preventDefault();
     let characterName = e.target.characterName.value;
@@ -50,6 +52,7 @@ class CharacterForm extends React.Component {
     e.preventDefault();
     let charData = this.state.formOneData;
     let choiceData = [];
+    //loop through each selectbox and add values to array by pulling from original option lists
     for (let i = 0; i < this.state.numOfOptions; i++) {
       choiceData.push(charData[2][i].from[e.target[i].value]);
     }
@@ -68,6 +71,8 @@ class CharacterForm extends React.Component {
     charData.push(stats);
     
     console.log(charData);
+    //TODO: Axios.post, send charData, then switch display to sheet.
+    //Don't forget to add Auth0 back in! 
   } 
 
   render() {
