@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import OptionSelect from './OptionSelect';
 import RadioStats from './RadioStats.js';
+// import { withAuth0 } from '@auth0/auth0-react';
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
 
@@ -24,15 +25,19 @@ class CharacterForm extends React.Component {
 
   raceClassHandler = async (e) => {
     e.preventDefault();
+    let characterName = e.target.characterName.value;
     let raceChosen = e.target.characterRace.value;
     let classChosen = e.target.characterClass.value;
+    let description = e.target.characterDescription.value;
     let mail = await axios.get(`${process.env.REACT_APP_SERVER}/formOne?race=${raceChosen}&charClass=${classChosen}`);
     let charData = mail.data;
+    charData[4] = [characterName,raceChosen,classChosen,description];
     let choices = []
     charData[2].forEach(choice => {
       choices.push(<OptionSelect index={charData[2].indexOf(choice)} choiceType={choice.type} options={choice.from} />);
     });
     this.setState({
+      charHeader: charData[4],
       formOneData: charData,
       formTwoOptions: choices,
       showForm1: false,
@@ -44,11 +49,11 @@ class CharacterForm extends React.Component {
   formTwoSubmit = async (e) => {
     e.preventDefault();
     let charData = this.state.formOneData;
-    let choiceData = {};
+    let choiceData = [];
     for (let i = 0; i < this.state.numOfOptions; i++) {
-      choiceData[i] = charData[2][i].from[e.target[i].value];
+      choiceData.push(charData[2][i].from[e.target[i].value]);
     }
-    charData.push(choiceData);
+    charData[3] = choiceData;
     this.setState({
       showForm1: false,
       showForm2: false,
@@ -58,14 +63,17 @@ class CharacterForm extends React.Component {
   }
 
   formThreeComplete = async (stats,profs) => {
-    let submission = this.state.form2Result;
-
+    let charData = this.state.form2Result;
+    charData[3] = [...charData[3],...profs];
+    charData.push(stats);
+    
+    console.log(charData);
   } 
 
   render() {
-
     return (
       <>
+        {this.state.charHeader?<h2>{`${this.state.charHeader[0]}, ${this.state.charHeader[1]} ${this.state.charHeader[2]}`}</h2>:<></>}
         {this.state.showForm1 ? <Form onSubmit={this.raceClassHandler}>
           <Form.Group controlId="characterName">
             <Form.Label>Character Name:</Form.Label>
