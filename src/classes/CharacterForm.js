@@ -4,7 +4,9 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import OptionSelect from './OptionSelect';
 import RadioStats from './RadioStats.js';
+import '../css/index.css';
 // import { withAuth0 } from '@auth0/auth0-react';
+
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
 
@@ -103,7 +105,7 @@ class CharacterForm extends React.Component {
             <Form.Label>Description:</Form.Label>
             <Form.Control as="textarea" rows={3} placeholder="Describe your character." />
           </Form.Group>
-          <Button type='submit'>Submit</Button>
+          <Button className='formOneButton' type='submit'>Submit</Button>
         </Form> : <></>}
         {this.state.showForm2 ?
           <Form onSubmit={this.formTwoSubmit}>

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import '../css/Landing.css';
-import { Jumbotron } from 'react-bootstrap';
 
 class Landing extends React.Component {
 
@@ -10,20 +9,19 @@ class Landing extends React.Component {
 
     return (
       <>
-        <div id='jumboCarousel'>
-          <Jumbotron>
-            <h1>Welcome to Character Sonnet!</h1>
-            <p>
-              We are a free to use character creater and manager for Dungeons and Dragons. Please Log in to use our site and refer to the pictures provided to see how it works.
+        <div id='landingText'>
+
+            <h1 id='welcome' >Welcome to Character Sonnet!</h1>
+            <p id='welcomeText'>
+              A free to use, character creater, and manager for Dungeons & Dragons. <br/> Log in to use our site, refer to the pictures below to see how it works, and start creating!
             </p>
 
-          </Jumbotron>
-          <Carousel touch='true'>
+          <Carousel id='images' touch='true'>
 
             <Carousel.Item key={"0"}>
               <img
 
-                src={`https://via.placeholder.com/500x400/000000/FFFFFF`}
+                src={`https://via.placeholder.com/800x400/000000/FFFFFF?text= .`}
                 alt="oh no"
               />
               <Carousel.Caption>
@@ -36,7 +34,7 @@ class Landing extends React.Component {
             <Carousel.Item key={"1"}>
               <img
 
-                src={`https://via.placeholder.com/500x400/000000/FFFFFF/?text=CharacterBuilder`}
+                src={`https://via.placeholder.com/800x400/000000/FFFFFF/?text= .`}
                 alt="oh no"
 
               />
@@ -51,7 +49,7 @@ class Landing extends React.Component {
             <Carousel.Item key={"2"}>
               <img
 
-                src={`https://via.placeholder.com/500x400/000000/FFFFFF`}
+                src={`https://via.placeholder.com/800x400/000000/FFFFFF?text= .`}
                 alt="oh no"
               />
               <Carousel.Caption>
