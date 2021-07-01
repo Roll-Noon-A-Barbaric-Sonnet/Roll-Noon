@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import OptionSelect from './OptionSelect';
-import StatSelector from './StatSelector.js';
+import RadioStats from './RadioStats.js';
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
 
@@ -102,7 +102,7 @@ class CharacterForm extends React.Component {
         
         {this.state.showForm3 ?
           <Form onSubmit={this.formThreeSubmit}>
-            <StatSelector/>
+            <RadioStats/>
             <Button type='submit'>Finish and Save</Button>
           </Form>
           : <></>}

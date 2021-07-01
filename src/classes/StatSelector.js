@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
-import { Button } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 
 class StatSelector extends React.Component {
 constructor(props) {
@@ -14,11 +14,11 @@ constructor(props) {
     con: 0,
     int: 0,
     wis: 0,
-    cha: 0,
+    cha: 0
   }
 }
 
-// Halndlers for each input box
+// Handlers for each input box
 strHandler = e => {
   console.log(e.target.value)
   this.setState({str: e.target.value})
@@ -67,12 +67,12 @@ wisHandler = e => {
 }
 
 chaHandler = e => {
-  this.setState({cha: e.value})
-  let stats = [this.state.str, this.state.dex, this.state.con, this.state.int, this.state.wis, this.state.cha]
+  this.setState({cha: e.value});
+  let stats = [this.state.str, this.state.dex, this.state.con, this.state.int, this.state.wis, this.state.cha];
   console.log(stats);
   let validStats = this.state.validStats.filter(i => !stats.includes(i) && i!=e.target.value);
   console.log(validStats);
-  this.setState({validStats})
+  this.setState({validStats});
 }
 
 handleSubmit = e => {}
@@ -80,8 +80,7 @@ handleSubmit = e => {}
 //resets stats to 0, resets validStats arr
 resetStats = e => {
   e.preventDefault();
-  this.setState({validStats: [8,10,12,13,14,15]})
-  this.setState({str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0})
+  this.setState({validStats: [8,10,12,13,14,15],str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0});
 }
 
   render () {
