@@ -1,0 +1,23 @@
+#jumboCarousel{
+  padding-top: 250px;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+.carousel{
+  width: 500px;
+  height: 400px;
+}
+.jumbotron{
+  width:500px;
+  height:auto;  
+  background:#dcfa669b;
+  text-align: center;
+}
+.jumbotron p{
+  font-size: 1.2em;
+  margin-top: 50px;
+}
+.jumbotron h1{
+  
+}

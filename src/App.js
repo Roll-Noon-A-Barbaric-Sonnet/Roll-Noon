@@ -9,7 +9,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
+import Landing from './classes/Landing';
 // import { Auth0Provider } from "@auth0/auth0-react";
 
 class App extends React.Component {
@@ -20,7 +20,9 @@ class App extends React.Component {
         <Header />
         <main id='mainBody'>
         <Switch>
-          <Route exact path='/'></Route>
+          <Route exact path='/'>
+            <Landing/>
+          </Route>
           <Route path='/selector'>
             <article id='mainArticle'>
             <CharacterMenu />
