@@ -4,7 +4,9 @@ import CharacterForm from './classes/CharacterForm';
 import CharacterMenu from './classes/CharacterMenu';
 import Header from './classes/Header';
 import Footer from './classes/Footer';
+import CharacterSheet from './classes/CharacterSheet';
 import {
+  Link,
   BrowserRouter as Router,
   Switch,
   Route
@@ -12,6 +14,8 @@ import {
 import Landing from './classes/Landing';
 import './css/index.css';
 import { withAuth0 } from '@auth0/auth0-react';
+
+
 
 class App extends React.Component {
 
@@ -23,6 +27,7 @@ class App extends React.Component {
         <main id='headerMain'>
           <Header />
           <main id='mainBody'>
+          <Link to="/charsheet" >char sheet</Link>
             <Switch>
               <Route exact path='/'>
                 <Landing />
@@ -41,10 +46,14 @@ class App extends React.Component {
                 <CharacterForm /> : <Landing />
               }
               </Route>
+              <Route path='/charsheet'>
+              <CharacterSheet/>
+              </Route>
             </Switch>
           </main>
         </main>
         <Footer />
+    
       </Router>
     );
   }
