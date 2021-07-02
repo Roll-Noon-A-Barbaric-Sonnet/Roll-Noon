@@ -23,8 +23,8 @@ class CharacterCard extends React.Component {
           </Card.Text>
           <div id="vedbuttonsOuter">
             <button
+              onClick={()=>this.props.view(this.props.mongid)}
               id='view'
-              class='vedbutton'
               class="btn-outline ">
               <i class="fas fa-exclamation-circle"></i>
               <span class="span">View</span>
@@ -33,7 +33,6 @@ class CharacterCard extends React.Component {
             <button
               onClick={()=>this.deleteChar(this.props.mongid)}
               id='delete'
-              class='vedbutton'
               class="btn-outline danger">
               <i class="fas fa-times-circle"></i>
               <span class="span">Delete</span>

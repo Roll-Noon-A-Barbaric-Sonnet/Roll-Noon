@@ -4,9 +4,7 @@ import CharacterForm from './classes/CharacterForm';
 import CharacterMenu from './classes/CharacterMenu';
 import Header from './classes/Header';
 import Footer from './classes/Footer';
-import CharacterSheet from './classes/CharacterSheet';
 import {
-  Link,
   BrowserRouter as Router,
   Switch,
   Route
@@ -54,9 +52,6 @@ class App extends React.Component {
                 isAuthenticated ?
                 <CharacterForm config={this.getConfig}/> : <Landing />
               }
-              </Route>
-              <Route path='/charsheet'>
-              <CharacterSheet/>
               </Route>
             </Switch>
           </main>
