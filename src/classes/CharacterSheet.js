@@ -11,6 +11,8 @@ import Card from 'react-bootstrap/Card'
 //proficiencies, equipment, features, spellcasting
 
 class CharacterSheet extends React.Component {
+  
+
   render() {
     return (
       <Router>

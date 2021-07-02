@@ -6,7 +6,6 @@ import axios from 'axios';
 
 
 class CharacterCard extends React.Component {
-
   render() {
     return (
 
