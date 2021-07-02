@@ -98,13 +98,11 @@ class RadioStats extends React.Component {
     let toolTwo=e.target.toolTwo.value;
     let profArray = [skillOne,skillTwo,toolOne,toolTwo];
     profArray = profArray.map(indx=>[...skills,...tools,...languages].find(obj=>obj.index===indx))
-    console.log(attributes, profArray);
     if (attributes.reduce((dups,att)=>attributes.filter(at=>att===at).length!==1?dups=dups+1:dups,0)===0) {
       let statObj = {}
       for (let i=0;i<6;i++) {
         statObj[attributes[i]]=scores[i];
       }
-      console.log(statObj,profArray);
       this.props.finish(statObj,profArray);
     } else {
         alert('Please choose each stat only once.');

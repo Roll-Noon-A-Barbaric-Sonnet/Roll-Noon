@@ -18,10 +18,20 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 
 class App extends React.Component {
+  
+  getConfig = async () => {
+    const { getIdTokenClaims } = this.props.auth0;
+    let tokenClaims = await getIdTokenClaims();
+    const jwt = tokenClaims.__raw;
+
+    const config = {
+      headers: { "authorization": `Bearer ${jwt}` }
+    };
+    return config;
+  }
 
   render() {
     const { isAuthenticated } = this.props.auth0
-    console.log(this.props.auth0);
     return (
       <Router>
         <main id='headerMain'>
@@ -36,14 +46,14 @@ class App extends React.Component {
                 {
                   isAuthenticated ?
                   <article id='mainArticle'>
-                  <CharacterMenu />
+                  <CharacterMenu config={this.getConfig}/>
                 </article> : <Landing />
                 }
               </Route>
               <Route path='/builder'>
               {
                 isAuthenticated ?
-                <CharacterForm /> : <Landing />
+                <CharacterForm config={this.getConfig}/> : <Landing />
               }
               </Route>
               <Route path='/charsheet'>
