@@ -8,10 +8,19 @@ import {
   Link
 } from "react-router-dom";
 import Card from 'react-bootstrap/Card'
-//proficiencies, equipment, features, spellcasting
 
 class CharacterSheet extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      charData: []
+    }
+  }
+  async componentDidMount(){
+    let charObj = await this.props.getChar(this.props.mongid);
+    this.setState({charData: charObj.data});
+    console.log('sheet got:',charObj);
+  }
 
   render() {
     return (
