@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterCard from './CharacterCard.js';
 import axios from 'axios';
+
 class CharacterMenu extends React.Component {
   constructor(props){
     super(props);

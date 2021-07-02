@@ -14,7 +14,7 @@
   /* width: 100%; */
   height: auto;
   box-shadow: black 0px 0px 8px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 img {
