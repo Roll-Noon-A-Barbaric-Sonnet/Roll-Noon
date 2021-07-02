@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import LoginButton from './LogInButton';
 import LogoutButton from './LogoutButton';
 import { Link } from 'react-router-dom';

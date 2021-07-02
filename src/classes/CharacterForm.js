@@ -5,7 +5,7 @@ import axios from 'axios';
 import OptionSelect from './OptionSelect';
 import RadioStats from './RadioStats.js';
 import '../css/index.css';
-// import { withAuth0 } from '@auth0/auth0-react';
+import { withAuth0 } from '@auth0/auth0-react';
 
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
@@ -71,10 +71,10 @@ class CharacterForm extends React.Component {
     let charData = this.state.form2Result;
     charData[3] = [...charData[3],...profs];
     charData.push(stats);
-    
-    console.log(charData);
-    //TODO: Axios.post, send charData, then switch display to sheet.
-    //Don't forget to add Auth0 back in! 
+    let config = await this.props.config();
+    console.log('config:',config);
+    let responseData = await axios.post(`${process.env.REACT_APP_SERVER}/add`, charData, config);
+    console.log(responseData.data);
   } 
 
   render() {
@@ -124,4 +124,4 @@ class CharacterForm extends React.Component {
   };
 };
 
-export default CharacterForm;
+export default withAuth0(CharacterForm);
