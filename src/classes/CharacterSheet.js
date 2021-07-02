@@ -9,42 +9,47 @@ import {
 } from "react-router-dom";
 import Card from 'react-bootstrap/Card'
 //proficiencies, equipment, features, spellcasting
+
 class CharacterSheet extends React.Component {
+  
+
   render() {
     return (
       <Router>
-
-       
-        <div id = 'cardContainer'>
+        <div id='cardContainer'>
           <Card id="nameCard">
             <Card.Title>
-              <div id="cardtitle"> 
-              <h3 id="h3CharName">{`Name: tacobell`}</h3>
+              <div id="cardtitle">
+                {/* <h3 id="h3CharName">{this.data.name}</h3> */}
               </div>
             </Card.Title>
-            <Card.Body class="blah">
+            <Card.Body id="nameCardBody">
               <div id='cardbody1'>
-                <h6>{`Race: Human`}</h6>
-                <h6>{`Class: Wizard`}</h6>
-                </div>
-
+                {/* <h6>{this.data.race}</h6>
+                <h6>{this.data.class}</h6> */}
+              </div>
             </Card.Body>
           </Card>
-          <Card id="nameCard">
+
+          <Card id="hpCard">
             <Card.Title>
-              <div id="healthCardTitle"> 
-              <h3 class="armorSpeed">{`Health: #`}</h3>
+              <div id="hpCardTitle">
+                {/* <h3 class="hitPoints">{this.data.hitPoints}</h3> */}
               </div>
             </Card.Title>
-            <Card.Body class="cardbody2">
-            <span class="armorSpeed">{`Armor: #`}</span><span class="armorSpeed">{`Speed: #`}</span>
-
+            <Card.Body class="hpCardBody">
+              <span class="armorSpeed">
+                {/* {this.data.armor} */}
+              </span>
+              <span class="armorSpeed">
+                {/* {this.data.speed} */}
+              </span>
             </Card.Body>
           </Card>
-          </div>
+        </div>
         <div id="linkContainer">
-        <Link id='panelLink1' to="/onePanel" >One Panel</Link>
-        <Link id='panelLink2'  to="/twoPanel" >Two Panel</Link>
+          <Link id='panelLink1' to="/onePanel" >Panel 1</Link>
+          <Link id='panelLink2' to="/twoPanel" >Panel 2</Link>
         </div>
         <Switch>
           <Route path='/onePanel'>

@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import '../css/CharacterCard.css';
 import axios from 'axios';
+
 class CharacterCard extends React.Component {
   
   deleteChar = async (id) => {
@@ -16,11 +17,10 @@ class CharacterCard extends React.Component {
     return (
         <Card id="mainCard" bg={'light'} style={{ width: '400px' }}>
         <Card.Body>
-          <Card.Title className='cardTextName'>{/*Enter Custom User Name from earlier in form*/}{this.props.name}</Card.Title>
+          <Card.Title className='cardTextName'>{this.props.name}</Card.Title>
           <Card.Text className='cardText'>
             {`Race ${this.props.race} | Level: 1 | Class: ${this.props.charClass}`} 
           </Card.Text>
-          {/*Need button click handler to go to a different page, edit, and delete?*/}
           <div id="vedbuttonsOuter">
             <button
               id='view'
@@ -29,6 +29,7 @@ class CharacterCard extends React.Component {
               <i class="fas fa-exclamation-circle"></i>
               <span class="span">View</span>
             </button>
+
             <button
               onClick={()=>this.deleteChar(this.props.mongid)}
               id='delete'
