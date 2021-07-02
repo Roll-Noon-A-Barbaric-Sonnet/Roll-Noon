@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import OptionSelect from './OptionSelect';
 import RadioStats from './RadioStats.js';
+import CharacterSheet from './CharacterSheet';
 import '../css/index.css';
 import { withAuth0 } from '@auth0/auth0-react';
 import '../css/Form.css';
@@ -20,9 +21,11 @@ class CharacterForm extends React.Component {
       showForm1: true,
       showForm2: false,
       showForm3: false,
+      sheet: false,
       numOfOptions: 0,
       form2Result: [],
-      form3Result: []    
+      form3Result: [],
+      sheetId: ''
     };
   };
 
@@ -64,7 +67,7 @@ class CharacterForm extends React.Component {
       showForm1: false,
       showForm2: false,
       showForm3: true,
-      form2Result: charData 
+      form2Result: charData
     })
   }
 
@@ -77,6 +80,11 @@ class CharacterForm extends React.Component {
     console.log('config:',config);
     let responseData = await axios.post(`${process.env.REACT_APP_SERVER}/add`, charData, config);
     console.log(responseData.data);
+    this.setState({
+      showForm3: false,
+      sheetId: responseData.data._id,
+      sheet: true
+    })
   } 
 
   render() {
@@ -121,6 +129,7 @@ class CharacterForm extends React.Component {
           </Form>
           : <></>}
         {this.state.showForm3?<RadioStats finish={this.formThreeComplete}/>:<></>}
+        {this.state.sheet? <CharacterSheet mongid={this.state.sheetId} config={this.props.config}/>:<></>}
       </>
     );
   };
