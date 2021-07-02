@@ -1,25 +1,25 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-
+import { CardColumns } from 'react-bootstrap';
 import '../css/CharacterCard.css';
 import Form from 'react-bootstrap/Form'
 
 class CharacterCard extends React.Component {
-
   render() {
     return (
 
       //Css for character card position is in the index.css
 
       //Stretch Goal Make Classes Change Border Color maybe background color? who knows
+      
       <Card id="mainCard" border={'warning'} bg={'light'} style={{ width: '500px' }}>
         <Card.Img variant="top" src="" />
 
         <Card.Body>
 
-          <Card.Title className='cardText'>{/*Enter Custom User Name from earlier in form*/}Character Name here</Card.Title>
+          <Card.Title className='cardText'>{/*Enter Custom User Name from earlier in form*/}{this.props.name}</Card.Title>
           <Card.Text className='cardText'>
-            Character Race Here | Character Level Here | Character Class Here
+            {`Character Race Here ${this.props.race} | Character Level: 1 | Character Class: ${this.props.charClass}`} 
 
           </Card.Text>
           {/*Need button click handeler to go to a different page, edit, and delete?*/}
@@ -46,3 +46,20 @@ class CharacterCard extends React.Component {
 }
 
 export default CharacterCard;
+{/* <CardColumns>
+         
+         {this.props.currentData.map((data, i) =>
+
+           <HornedBeast
+             beastNum={i}
+             key={i}
+             title={data.title}
+             imgUrl={data.image_url}
+             description={data.description}
+             horns={data.horns}
+             showModal={this.props.showModal}
+             hideModal={this.hideModal}
+           />
+         )}
+
+       </CardColumns> */}
