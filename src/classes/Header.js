@@ -8,7 +8,10 @@ class Header extends React.Component {
     return (
 
       <header id='mainHeader'>
+        <div id='titleChild'>
+        <i id='scroll' class="fas fa-scroll fa-4x"></i>
         <h1 id='mainTitle'>Character Sonnet</h1>
+        </div>
         <h6 id='mainSubTitle'>~ Created by Roll-Noon ~</h6>
         <Navbar />
       </header>
