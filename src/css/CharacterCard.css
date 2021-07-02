@@ -1,28 +1,72 @@
 #mainCard{
- border-radius: 10px;
+  background: rgb(226,222,208);
+  background: radial-gradient(circle, rgba(226,222,208,1) 0%, rgba(179,175,165,1) 100%);
+  border-radius: 10px;
+  border: black solid;
+}
+
+.cardTextName{
+  font-size: 1.75em;
+  font-family: 'Almendra', serif;
+  text-align: center;
+  color: black;
   border: black;
 }
 
 .cardText{
-text-align: center;
-border: black;
+  font-size: 1.25em;
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+  color: black;
+  border: black;
 }
 
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
-.btn-outline {
+#view {
   font-weight: bold;
-  background-color: #ffffff;
-  border-style: solid;
+  background-color: ivory;
+  border-style: solid #647C90;
+  border-radius: 5px;
   border-width: 2px;
   padding: 0;
   outline: 0;
   display: inline-flex;
   overflow: hidden;
   cursor: pointer;
-  
   transition: all 300ms ease-in-out;
+  color: #647C90;
 }
+
+#delete {
+  font-weight: bold;
+  background-color: ivory;
+  border-style: solid #9f2a2d;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 0;
+  outline: 0;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  color: #9f2a2d;
+}
+
+/* .btn-outline {
+  font-weight: bold;
+  background-color: ivor;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 0;
+  outline: 0;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+} */
+
 .btn-outline i,
 .btn-outline span {
   width: 100%;
