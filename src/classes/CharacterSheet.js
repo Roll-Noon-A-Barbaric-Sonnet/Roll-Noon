@@ -97,10 +97,10 @@ class CharacterSheet extends React.Component {
             </ListGroup>
           </Card>
           {
-            this.state.charData.spellcasting ?
+            this.state.charData?.spellcasting ?
             <Card>
             <Card.Body>
-              <Card.Text className='spellCasting'>{this.state.charData.spellcasting.spellcasting_ability}</Card.Text>
+              <Card.Text className='spellCasting'>{this.state.charData?.spellcasting?.spellcasting_ability?.name}</Card.Text>
 
               <Table>
               <thead>
