@@ -33,8 +33,7 @@ body {
 #scroll {
   transition: 500ms;
   margin-right: .5em;
-  color: #E2DED0;
-  /* color: #9f2a2d; */
+  color: #9f2a2d;
   text-shadow: #260707c3 -2px 2px 3px;
   justify-self: center;
   align-self: center;
@@ -54,8 +53,7 @@ body {
   transition: 500ms;
   font-family: 'Almendra', serif;
   text-align: center;
-  color: #E2DED0;
-  /* color: #9f2a2d; */
+  color: #9f2a2d;
   text-shadow: #260707c3 -2px 2px 4px;
   -webkit-font-smoothing: antialiased;
 }
@@ -74,7 +72,7 @@ body {
   transition: 800ms;
   font-family: 'Almendra', serif;
   text-align: center;
-  color: #E2DED0;
+  color: black;
   text-shadow: #000000c3 -1px -1px .25px;
 }
 
@@ -104,11 +102,10 @@ body {
   margin-right: 1em;
   font-size: 1.25em;
   font-family: 'Almendra', serif;
-  color: #E2DED0;
-  background-color: #69171a;
+  color: #9f2a2d;
+  background-color: black;
   border: solid black 2px;
   border-radius: 5px 5px;
-  box-shadow: 0px 0px 8px black;
 }
 
 .navButton:hover {
@@ -117,37 +114,20 @@ body {
   border: solid black 2px;
 }
 
-.navButton:focus {
-  outline: none;
-  box-shadow: none;
-  color: #9f2a2d;
-  background-color: #E2DED0;
-  border: solid black 2px;
-}
-
 .navButtonL {
   width: 100px;
   margin-right: 1em;
   font-size: 1.25em;
   font-family: 'Almendra', serif;
-  color: #E2DED0;
-  background-color: #69171a;
+  color: #9f2a2d;
+  background-color: black;
   border: solid black 2px;
   border-radius: 5px 5px;
-  box-shadow: 0px 0px 8px black;
 }
 
 .navButtonL:hover {
   color: #9f2a2d;
   background: #E2DED0;
-  border: solid black 2px;
-}
-
-.navButtonL:focus {
-  outline: none;
-  box-shadow: none;
-  color: #9f2a2d;
-  background-color: #E2DED0;
   border: solid black 2px;
 }
 
@@ -167,10 +147,27 @@ body {
   width: 70%;
 }
 
-/* header main container */
+/* Character Form Styling */
+
+.formOneButton {
+  font-size: 1.25em;
+  font-family: 'Almendra', serif;
+  color: #9f2a2d;
+  background-color: black;
+  border: solid black 2px;
+  border-radius: 5px 5px;
+
+}
+
+.formOneButton:hover {
+  color: #9f2a2d;
+  background: #E2DED0;
+  border: solid black 2px;
+
+}
 
 #headerMain{
-  padding-bottom: 16em;
+  padding-bottom: 5em;
 }
 
 /* --------------- Footer Styling ---------------- */
@@ -202,29 +199,26 @@ body {
   transition: 400ms;
   align-self: center;
   justify-self: center;
-  color: #E2DED0;
+  color: black;
 }
 
 #d20:hover {
   transition: 400ms;
-  color: #647C90;
-  text-shadow: #000000c3 -1px -1px 1px;
+  color: #E2DED0;
 }
 
 #authors {
   font-family: 'Almendra', serif;
   align-self: center;
   justify-self: center;
-  color: #E2DED0;
-  text-shadow: #000000c3 -1px -1px .25px;
+  color: black;
 }
 
 #link {
   font-family: 'Almendra', serif;
   align-self: center;
   justify-self: center;
-  color: #E2DED0;
-  text-shadow: #000000c3 -1px -1px 1px;
+  color: black;
 }
 
 #footerAuthors{
@@ -245,13 +239,12 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 0 0;
-  color: #E2DED0;
-  text-shadow: #000000c3 -1px -1px .5px;
+  color: black;
 }
 
 #team:hover {
   transition: 300ms;
-  color: #647C90;
+  color: #E2DED0;
 }
 
 #url {
@@ -261,13 +254,12 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 0 0;
-  color: #E2DED0;
-  text-shadow: #000000c3 -1px -1px .5px;
+  color: black;
 }
 
 #url:hover {
   transition: 300ms;
-  color: #647C90;
+  color: #E2DED0;
 }
 
 #links {
@@ -326,7 +318,7 @@ body {
     transition: 500ms;
     padding-left: .35em;
     margin-right: -.15em;
-    color: #E2DED0;
+    color: #9f2a2d;
     text-shadow: #260707c3 -2px 2px 3px;
     justify-self: center;
     align-self: center;
@@ -346,7 +338,7 @@ body {
     transition: 500ms;
     font-family: 'Almendra', serif;
     text-align: center;
-    color: #E2DED0;
+    color: #9f2a2d;
     text-shadow: #260707c3 -2px 2px 4px;
     -webkit-font-smoothing: antialiased;
   }
@@ -365,7 +357,7 @@ body {
     transition: 800ms;
     font-family: 'Almendra', serif;
     text-align: center;
-    color: #E2DED0;
+    color: black;
     text-shadow: #000000c3 -1px -1px .25px;
   }
   
@@ -393,14 +385,13 @@ body {
   
   .navButton {
     width: fit-content;
-    margin-right: .35em;
+    margin-right: 1em;
     font-size: 1em;
     font-family: 'Almendra', serif;
-    color: #E2DED0;
-    background-color: #69171a;
+    color: #9f2a2d;
+    background-color: black;
     border: solid black 2px;
     border-radius: 5px 5px;
-    box-shadow: 0px 0px 4px black;
   }
   
   .navButton:hover {
@@ -409,37 +400,20 @@ body {
     border: solid black 2px;
   }
   
-  .navButton:focus {
-    outline: none;
-    box-shadow: none;
-    color: #9f2a2d;
-    background-color: #E2DED0;
-    border: solid black 2px;
-  }
-
   .navButtonL {
     width: fit-content;
-    margin-right: .35em;
+    margin-right: 1em;
     font-size: 1em;
     font-family: 'Almendra', serif;
-    color: #E2DED0;
-    background-color: #69171a;
+    color: #9f2a2d;
+    background-color: black;
     border: solid black 2px;
     border-radius: 5px 5px;
-    box-shadow: 0px 0px 4px black;
   }
   
   .navButtonL:hover {
     color: #9f2a2d;
     background: #E2DED0;
-    border: solid black 2px;
-  }
-
-  .navButtonL:focus {
-    outline: none;
-    box-shadow: none;
-    color: #9f2a2d;
-    background-color: #E2DED0;
     border: solid black 2px;
   }
   
@@ -456,7 +430,7 @@ body {
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 70%;
   }
   
   /* Character Form Styling */
@@ -488,7 +462,7 @@ body {
   #mainFooter {
     position: absolute;
     bottom: 0;
-    padding: 4px 8px 4px 8px;
+    padding: 0px 8px 0px 8px;
     margin-top: auto;
     margin-bottom: 0;
     width: 100vw;
@@ -515,8 +489,7 @@ body {
     font-family: 'Almendra', serif;
     align-self: center;
     justify-self: center;
-    color: #E2DED0;
-    text-shadow: #000000c3 -1px -1px .25px;
+    color: black;
   }
 
   #link {
@@ -541,8 +514,7 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 0 0;
-    color: #E2DED0;
-    text-shadow: #000000c3 -1px -1px .5px;
+    color: black;
   }
 
   #url {
@@ -551,7 +523,7 @@ body {
   
   #team:hover {
     transition: 300ms;
-    color: #647C90;
+    color: #E2DED0;
   }
   
   #links {
