@@ -37,7 +37,6 @@ class App extends React.Component {
         <main id='headerMain'>
           <Header />
           <main id='mainBody'>
-          <Link to="/charsheet" >char sheet</Link>
             <Switch>
               <Route exact path='/'>
                 <Landing />

@@ -72,6 +72,7 @@ class CharacterForm extends React.Component {
     let charData = this.state.form2Result;
     charData[3] = [...charData[3],...profs];
     charData.push(stats);
+    console.log(charData);
     let config = await this.props.config();
     console.log('config:',config);
     let responseData = await axios.post(`${process.env.REACT_APP_SERVER}/add`, charData, config);
