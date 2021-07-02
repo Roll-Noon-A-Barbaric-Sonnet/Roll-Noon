@@ -2,8 +2,12 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import { CardColumns } from 'react-bootstrap';
 import '../css/CharacterCard.css';
+import axios from 'axios';
+
+
 
 class CharacterCard extends React.Component {
+
   render() {
     return (
 
@@ -13,11 +17,10 @@ class CharacterCard extends React.Component {
       
         <Card id="mainCard" bg={'light'} style={{ width: '400px' }}>
         <Card.Body>
-          <Card.Title className='cardTextName'>{/*Enter Custom User Name from earlier in form*/}{this.props.name}</Card.Title>
+          <Card.Title className='cardTextName'>{this.props.name}</Card.Title>
           <Card.Text className='cardText'>
-            {`Character Race Here ${this.props.race} | Character Level: 1 | Character Class: ${this.props.charClass}`} 
+            {`${this.props.level} | ${this.props.race} | ${this.props.Class}`} 
           </Card.Text>
-          {/*Need button click handeler to go to a different page, edit, and delete?*/}
           <div id="vedbuttonsOuter">
             <button
               id='view'
@@ -26,6 +29,7 @@ class CharacterCard extends React.Component {
               <i class="fas fa-exclamation-circle"></i>
               <span class="span">View</span>
             </button>
+
             <button
               id='delete'
               class='vedbutton'
