@@ -42,9 +42,10 @@ class CharacterSheet extends React.Component {
             </Card.Body>
           </Card>
           </div>
-        
-        <Link to="/onePanel" >One Panel</Link>
-        <Link to="/twoPanel" >Two Panel</Link>
+        <div id="linkContainer">
+        <Link id='panelLink1' to="/onePanel" >One Panel</Link>
+        <Link id='panelLink2'  to="/twoPanel" >Two Panel</Link>
+        </div>
         <Switch>
           <Route path='/onePanel'>
             <CharacterDetails />
