@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import { CardColumns } from 'react-bootstrap';
 import '../css/CharacterCard.css';
 
 class CharacterCard extends React.Component {
@@ -41,20 +40,3 @@ class CharacterCard extends React.Component {
 }
 
 export default CharacterCard;
-{/* <CardColumns>
-         
-         {this.props.currentData.map((data, i) =>
-
-           <HornedBeast
-             beastNum={i}
-             key={i}
-             title={data.title}
-             imgUrl={data.image_url}
-             description={data.description}
-             horns={data.horns}
-             showModal={this.props.showModal}
-             hideModal={this.hideModal}
-           />
-         )}
-
-       </CardColumns> */}

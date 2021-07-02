@@ -5,8 +5,8 @@ import axios from 'axios';
 import OptionSelect from './OptionSelect';
 import RadioStats from './RadioStats.js';
 import '../css/index.css';
+import { withAuth0 } from '@auth0/auth0-react';
 import '../css/Form.css';
-// import { withAuth0 } from '@auth0/auth0-react';
 
 const classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard'];
 const races = ['Dwarf', 'Elf', 'Halfling', 'Human', 'Dragonborn', 'Gnome', 'Half-Elf', 'Half-Orc', 'Tiefling'];
@@ -26,6 +26,8 @@ class CharacterForm extends React.Component {
     };
   };
 
+  //take race and class, get base data and options from server,
+  //then format all of it and prep options for form2 
   raceClassHandler = async (e) => {
     e.preventDefault();
     let characterName = e.target.characterName.value;
@@ -53,6 +55,7 @@ class CharacterForm extends React.Component {
     e.preventDefault();
     let charData = this.state.formOneData;
     let choiceData = [];
+    //loop through each selectbox and add values to array by pulling from original option lists
     for (let i = 0; i < this.state.numOfOptions; i++) {
       choiceData.push(charData[2][i].from[e.target[i].value]);
     }
@@ -69,8 +72,10 @@ class CharacterForm extends React.Component {
     let charData = this.state.form2Result;
     charData[3] = [...charData[3],...profs];
     charData.push(stats);
-    
-    console.log(charData);
+    let config = await this.props.config();
+    console.log('config:',config);
+    let responseData = await axios.post(`${process.env.REACT_APP_SERVER}/add`, charData, config);
+    console.log(responseData.data);
   } 
 
   render() {
@@ -120,4 +125,4 @@ class CharacterForm extends React.Component {
   };
 };
 
-export default CharacterForm;
+export default withAuth0(CharacterForm);

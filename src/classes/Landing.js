@@ -16,7 +16,7 @@ class Landing extends React.Component {
 
             <h1 id='welcome' >Welcome to Character Sonnet!</h1>
             <p id='welcomeText'>
-              A free to use character creater, and manager for Dungeons & Dragons. <br/> Log in to use our site, refer to the pictures below to see how it works, and start creating!
+              A free to use, character creator, and manager for Dungeons & Dragons. <br/> Log in to use our site, refer to the pictures below to see how it works, and start creating!
             </p>
 
           <Carousel id='images' touch='true'fade>
