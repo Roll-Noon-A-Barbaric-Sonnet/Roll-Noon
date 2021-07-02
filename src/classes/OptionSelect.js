@@ -1,5 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import '../css/index.css';
+import '../css/Form.css';
 
 class OptionSelect extends React.Component {
 
@@ -7,8 +9,8 @@ class OptionSelect extends React.Component {
     console.log(this.props.options);
     return (
         <Form.Group controlId={this.props.index}>
-          <Form.Label>{this.props.choiceType}</Form.Label>
-          <Form.Control as="select" defaultValue={`Choose ${this.props.choiceType}`}>
+          <Form.Label className='formLabel'>{this.props.choiceType}</Form.Label>
+          <Form.Control className='formControl' as="select" defaultValue={`Choose ${this.props.choiceType}`}>
             {this.props.options.map((option,idx) => {
               if(option.equipment){
                 return <option value={idx} key={option.equipment.index}>{option.equipment.name}</option>               

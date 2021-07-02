@@ -1,8 +1,6 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-
+import Card from 'react-bootstrap/Card';
 import '../css/CharacterCard.css';
-import Form from 'react-bootstrap/Form'
 
 class CharacterCard extends React.Component {
 
@@ -12,33 +10,27 @@ class CharacterCard extends React.Component {
       //Css for character card position is in the index.css
 
       //Stretch Goal Make Classes Change Border Color maybe background color? who knows
-      <Card id="mainCard" border={'warning'} bg={'light'} style={{ width: '500px' }}>
-        <Card.Img variant="top" src="" />
-
+      <Card id="mainCard" bg={'light'} style={{ width: '400px' }}>
         <Card.Body>
-
-          <Card.Title className='cardText'>{/*Enter Custom User Name from earlier in form*/}Character Name here</Card.Title>
-          <Card.Text className='cardText'>
-            Character Race Here | Character Level Here | Character Class Here
-
-          </Card.Text>
+          <Card.Title className='cardTextName'>{/*Enter Custom User Name from earlier in form*/}Matt Mercer</Card.Title>
+          <Card.Text className='cardText'>Level 1 | Human | Developer</Card.Text>
           {/*Need button click handeler to go to a different page, edit, and delete?*/}
-
           <div id="vedbuttonsOuter">
-            <button class='vedbutton' class="btn-outline primary"><i class="fas fa-exclamation-circle"></i><span class="span">View</span></button>
-
-            <button class='vedbutton' class="btn-outline success"><i class="fas fa-edit"></i><span class="span">Edit</span></button>
-            <button class='vedbutton' class="btn-outline danger"><i class="fas fa-times-circle"></i><span class="span">Delete</span></button>
-
+            <button
+              id='view'
+              class='vedbutton'
+              class="btn-outline ">
+              <i class="fas fa-exclamation-circle"></i>
+              <span class="span">View</span>
+            </button>
+            <button
+              id='delete'
+              class='vedbutton'
+              class="btn-outline danger">
+              <i class="fas fa-times-circle"></i>
+              <span class="span">Delete</span>
+            </button>
           </div>
-          {//Upload Character Image
-          }
-          <br />
-          <Form>
-            <Form.Group>
-              <Form.File id="characterPic" label="Upload Your Character's Picture" />
-            </Form.Group>
-          </Form>
         </Card.Body>
       </Card>
     )

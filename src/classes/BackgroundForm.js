@@ -1,6 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
+import '../css/index.css';
+import '../css/Form.css';
 
 let skills = ['-Skills-', 'Acrobatics', 'Animal Handling', 'Arcana', 'Athletics', 'Deception', 'History', 'Insight', 'Intimidation', 'Investigation', 'Medicine', 'Nature', 'Perception', 'Performance', 'Persuasion', 'Religion', 'Sleight of Hand', 'Stealth', 'Survival'];
 let languages = ['-Languages-', 'Abyssal', 'Celestial', 'Common', 'Deep Speech', 'Draconic', 'Dwarvish', 'Elvish', 'Giant', 'Gnomish', 'Goblin', 'Halfling', 'Infernal', 'Orc', 'Primordial', 'Sylvan','Undercommon'];
@@ -28,22 +30,22 @@ class BackgroundForm extends React.Component {
       //choose 2 from: proficiencies, languages, tools, 
       <Form onSubmit={this.submitProfs}>
           <Form.Group controlId="skillOne">
-            <Form.Control as="select">
+            <Form.Control className='formControl' as="select">
               {skills.map(choice => <option value={choice}>{choice}</option>)}
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="skillTwo">
-            <Form.Control as="select">
+            <Form.Control className='formControl' as="select">
               {skills.map(choice => <option value={choice}>{choice}</option>)}
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="toolOne">
-          <Form.Control as="select">
+          <Form.Control className='formControl' as="select">
             {[...tools,...languages].map(choice => <option value={choice}>{choice}</option>)}
           </Form.Control>
           </Form.Group>
           <Form.Group controlId="toolTwo">
-          <Form.Control as="select">
+          <Form.Control className='formControl' as="select">
             {[...tools,...languages].map(choice => <option value={choice}>{choice}</option>)}
           </Form.Control>
           </Form.Group>
