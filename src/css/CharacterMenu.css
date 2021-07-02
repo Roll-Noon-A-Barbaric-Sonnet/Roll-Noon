@@ -1,0 +1,54 @@
+
+#divArmSpeedHealth{
+display: flex;
+}
+.armorSpeed{
+ 
+  color: black;
+  height: 50px;
+  
+  
+  font-size: 20px;
+}
+#h3CharName{
+  color:black;
+  
+  width: auto;
+}
+#maxHp{
+  color: black;
+  
+}
+#classrace{
+  width: 200px;
+  display: flex;
+  border: rgb(223, 18, 18) 2px solid;
+  justify-content: space-between;
+}
+
+#cardtitle{
+  text-align: start;
+  padding-left: 5px;
+}
+#cardbody1 h6{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 15px;
+  
+}
+.cardbody2{
+  display: flex;
+  gap: 10px;
+  
+}
+
+#nameCard{
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  background-color: #E2DED0;
+}
+#cardContainer{
+ display: flex;
+ gap: 10px;
+}
