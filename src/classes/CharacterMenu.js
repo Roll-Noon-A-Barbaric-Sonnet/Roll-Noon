@@ -27,7 +27,7 @@ class CharacterMenu extends React.Component {
     const config = await this.props.config();
     console.log('config:',config);
     const oneChar = await axios.get(`${process.env.REACT_APP_SERVER}/characters/${id}`,config);
-    console.log('that char:',oneChar.data);
+    console.log('that char:',oneChar.data,oneChar.data.traits,oneChar.data.skills,oneChar.data.equipment,oneChar.data.features,oneChar.data.proficiencies,oneChar.data.languages);
     return oneChar.data;
   }
 
