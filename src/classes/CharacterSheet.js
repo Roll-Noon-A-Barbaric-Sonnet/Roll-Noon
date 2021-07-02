@@ -16,8 +16,6 @@ class CharacterSheet extends React.Component {
     }
   }
 
-
-
   async componentDidMount() {
     const config = await this.props.config();
     console.log('config:', config);
@@ -100,8 +98,7 @@ class CharacterSheet extends React.Component {
             this.state.charData?.spellcasting ?
             <Card>
             <Card.Body>
-              <Card.Text className='spellCasting'>{this.state.charData?.spellcasting?.spellcasting_ability?.name}</Card.Text>
-
+              <Card.Text className='spellCasting'>{this.state.charData.spellcasting.spellcasting_ability.name}</Card.Text>
               <Table>
               <thead>
                 <tr>
