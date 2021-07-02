@@ -11,19 +11,23 @@
 }
 
 #images {
-  width: 100%;
+  /* width: 100%; */
   height: auto;
+  box-shadow: black 0px 0px 8px;
+  /* overflow: scroll; */
 }
 
 img {
   width: 100%;
+  height: auto;
 }
 
 #welcome {
   text-align: center;
   font-size: 3em;
   font-family: 'Almendra', serif;
-  color: black;
+  color: #E2DED0;
+  text-shadow: #000000c3 -1px -1px .25px;
 }
 
 #welcomeText {
@@ -33,5 +37,47 @@ img {
   font-size: 1.5em;
   font-family: 'Nanum Myeongjo', serif;
   margin-bottom: 1em;
-  color: black;
+  color: #E2DED0;
+  text-shadow: #000000c3 -1px -1px .25px;
+}
+
+@media ( max-width: 428px ) {
+  #landingText {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  #welcome {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Almendra', serif;
+    color: #E2DED0;
+    text-shadow: #000000c3 -1px -1px .25px;
+  }
+  
+  #welcomeText {
+    text-align: center;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    font-size: 1em;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-bottom: 1em;
+    color: #E2DED0;
+    text-shadow: #000000c3 -1px -1px .25px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  color: red;
+  background-size: 100%, 100%;
 }

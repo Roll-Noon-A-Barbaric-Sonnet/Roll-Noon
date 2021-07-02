@@ -1,7 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
+import '../css/index.css';
+import '../css/Form.css';
 
 //big object arrays incoming: 
 let skills = [
@@ -111,84 +112,84 @@ class RadioStats extends React.Component {
   render () {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <h3>Assign your ability scores, choose each stat only once.</h3>
-        <h4>{`Score: ${this.state.queryArray[0]}`}</h4>
+        <h3 id='form3Notice'>Assign your ability scores, choose each stat only once.</h3>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[0]}`}</h4>
         <div id='0'>
-          <Form.Check inline label="Str" name='group1' type='radio' onChange={()=>this.radioChange(0,'str')}/>
-          <Form.Check inline label="Dex" name='group1' type='radio' onChange={()=>this.radioChange(0,'dex')}/>
-          <Form.Check inline label="Con" name='group1' type='radio' onChange={()=>this.radioChange(0,'con')}/>
-          <Form.Check inline label="Int" name='group1' type='radio' onChange={()=>this.radioChange(0,'int')}/>
-          <Form.Check inline label="Wis" name='group1' type='radio' onChange={()=>this.radioChange(0,'wis')}/>
-          <Form.Check inline label="Cha" name='group1' type='radio' onChange={()=>this.radioChange(0,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name='group1' type='radio' onChange={()=>this.radioChange(0,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name='group1' type='radio' onChange={()=>this.radioChange(0,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name='group1' type='radio' onChange={()=>this.radioChange(0,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name='group1' type='radio' onChange={()=>this.radioChange(0,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name='group1' type='radio' onChange={()=>this.radioChange(0,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name='group1' type='radio' onChange={()=>this.radioChange(0,'cha')}/>
         </div>
-        <h4>{`Score: ${this.state.queryArray[1]}`}</h4>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[1]}`}</h4>
         <div id='1'>
-          <Form.Check inline label="Str" name='group2' type='radio' onChange={()=>this.radioChange(1,'str')}/>
-          <Form.Check inline label="Dex" name='group2' type='radio' onChange={()=>this.radioChange(1,'dex')}/>
-          <Form.Check inline label="Con" name='group2' type='radio' onChange={()=>this.radioChange(1,'con')}/>
-          <Form.Check inline label="Int" name='group2' type='radio' onChange={()=>this.radioChange(1,'int')}/>
-          <Form.Check inline label="Wis" name='group2' type='radio' onChange={()=>this.radioChange(1,'wis')}/>
-          <Form.Check inline label="Cha" name='group2' type='radio' onChange={()=>this.radioChange(1,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name='group2' type='radio' onChange={()=>this.radioChange(1,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name='group2' type='radio' onChange={()=>this.radioChange(1,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name='group2' type='radio' onChange={()=>this.radioChange(1,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name='group2' type='radio' onChange={()=>this.radioChange(1,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name='group2' type='radio' onChange={()=>this.radioChange(1,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name='group2' type='radio' onChange={()=>this.radioChange(1,'cha')}/>
         </div>
-        <h4>{`Score: ${this.state.queryArray[2]}`}</h4>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[2]}`}</h4>
         <div id='2'>
-          <Form.Check inline label="Str" name='group3' type='radio' onChange={()=>this.radioChange(2,'str')}/>
-          <Form.Check inline label="Dex" name='group3' type='radio' onChange={()=>this.radioChange(2,'dex')}/>
-          <Form.Check inline label="Con" name='group3' type='radio' onChange={()=>this.radioChange(2,'con')}/>
-          <Form.Check inline label="Int" name='group3' type='radio' onChange={()=>this.radioChange(2,'int')}/>
-          <Form.Check inline label="Wis" name='group3' type='radio' onChange={()=>this.radioChange(2,'wis')}/>
-          <Form.Check inline label="Cha" name='group3' type='radio' onChange={()=>this.radioChange(2,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name='group3' type='radio' onChange={()=>this.radioChange(2,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name='group3' type='radio' onChange={()=>this.radioChange(2,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name='group3' type='radio' onChange={()=>this.radioChange(2,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name='group3' type='radio' onChange={()=>this.radioChange(2,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name='group3' type='radio' onChange={()=>this.radioChange(2,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name='group3' type='radio' onChange={()=>this.radioChange(2,'cha')}/>
         </div>
-        <h4>{`Score: ${this.state.queryArray[3]}`}</h4>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[3]}`}</h4>
         <div id='3'>
-          <Form.Check inline label="Str" name='group4' type='radio' onChange={()=>this.radioChange(3,'str')}/>
-          <Form.Check inline label="Dex" name='group4' type='radio' onChange={()=>this.radioChange(3,'dex')}/>
-          <Form.Check inline label="Con" name='group4' type='radio' onChange={()=>this.radioChange(3,'con')}/>
-          <Form.Check inline label="Int" name='group4' type='radio' onChange={()=>this.radioChange(3,'int')}/>
-          <Form.Check inline label="Wis" name='group4' type='radio' onChange={()=>this.radioChange(3,'wis')}/>
-          <Form.Check inline label="Cha" name='group4' type='radio' onChange={()=>this.radioChange(3,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name='group4' type='radio' onChange={()=>this.radioChange(3,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name='group4' type='radio' onChange={()=>this.radioChange(3,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name='group4' type='radio' onChange={()=>this.radioChange(3,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name='group4' type='radio' onChange={()=>this.radioChange(3,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name='group4' type='radio' onChange={()=>this.radioChange(3,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name='group4' type='radio' onChange={()=>this.radioChange(3,'cha')}/>
         </div>
-        <h4>{`Score: ${this.state.queryArray[4]}`}</h4>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[4]}`}</h4>
         <div id='4'>
-          <Form.Check inline label="Str" name="group5" type='radio' onChange={()=>this.radioChange(4,'str')}/>
-          <Form.Check inline label="Dex" name="group5" type='radio' onChange={()=>this.radioChange(4,'dex')}/>
-          <Form.Check inline label="Con" name="group5" type='radio' onChange={()=>this.radioChange(4,'con')}/>
-          <Form.Check inline label="Int" name="group5" type='radio' onChange={()=>this.radioChange(4,'int')}/>
-          <Form.Check inline label="Wis" name="group5" type='radio' onChange={()=>this.radioChange(4,'wis')}/>
-          <Form.Check inline label="Cha" name="group5" type='radio' onChange={()=>this.radioChange(4,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name="group5" type='radio' onChange={()=>this.radioChange(4,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name="group5" type='radio' onChange={()=>this.radioChange(4,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name="group5" type='radio' onChange={()=>this.radioChange(4,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name="group5" type='radio' onChange={()=>this.radioChange(4,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name="group5" type='radio' onChange={()=>this.radioChange(4,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name="group5" type='radio' onChange={()=>this.radioChange(4,'cha')}/>
         </div>
-        <h4>{`Score: ${this.state.queryArray[5]}`}</h4>
+        <h4 class='form3Score'>{`Score: ${this.state.queryArray[5]}`}</h4>
         <div id='5'>
-          <Form.Check inline label="Str" name="group6" type='radio' onChange={()=>this.radioChange(5,'str')}/>
-          <Form.Check inline label="Dex" name="group6" type='radio' onChange={()=>this.radioChange(5,'dex')}/>
-          <Form.Check inline label="Con" name="group6" type='radio' onChange={()=>this.radioChange(5,'con')}/>
-          <Form.Check inline label="Int" name="group6" type='radio' onChange={()=>this.radioChange(5,'int')}/>
-          <Form.Check inline label="Wis" name="group6" type='radio' onChange={()=>this.radioChange(5,'wis')}/>
-          <Form.Check inline label="Cha" name="group6" type='radio' onChange={()=>this.radioChange(5,'cha')}/>
+          <Form.Check className='form3Str' inline label="Str" name="group6" type='radio' onChange={()=>this.radioChange(5,'str')}/>
+          <Form.Check className='form3Dex' inline label="Dex" name="group6" type='radio' onChange={()=>this.radioChange(5,'dex')}/>
+          <Form.Check className='form3Con' inline label="Con" name="group6" type='radio' onChange={()=>this.radioChange(5,'con')}/>
+          <Form.Check className='form3Int' inline label="Int" name="group6" type='radio' onChange={()=>this.radioChange(5,'int')}/>
+          <Form.Check className='form3Wis' inline label="Wis" name="group6" type='radio' onChange={()=>this.radioChange(5,'wis')}/>
+          <Form.Check className='form3Cha' inline label="Cha" name="group6" type='radio' onChange={()=>this.radioChange(5,'cha')}/>
         </div> 
         <Form.Group controlId="skillOne">
-            <Form.Label>Skills</Form.Label>
-            <Form.Control as="select">
+            <Form.Label className='form3Label'>Skills</Form.Label>
+            <Form.Control className='formControl' as="select">
               {skills.map(choice => <option value={choice.index}>{`Skill: ${choice.name}`}</option>)}
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="skillTwo">
-            <Form.Control as="select">
+            <Form.Control className='formControl' as="select">
               {skills.map(choice => <option value={choice.index}>{`Skill: ${choice.name}`}</option>)}
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="toolOne">
-          <Form.Label>Tool/Language Proficiencies</Form.Label>
-          <Form.Control as="select">
+          <Form.Label className='form3Label'>Tool/Language Proficiencies</Form.Label>
+          <Form.Control className='formControl' as="select">
             {[...tools.map(choice => <option value={choice.index}>{`Tool Proficiency: ${choice.name}`}</option>),...languages.map(choice => <option value={choice.index}>{`Language: ${choice.name}`}</option>)]}
           </Form.Control>
           </Form.Group>
           <Form.Group controlId="toolTwo">
-          <Form.Control as="select">
+          <Form.Control className='formControl' as="select">
             {[...tools,...languages].map(choice => <option value={choice.index}>{`Tool Proficiency: ${choice.name}`}</option>)}
           </Form.Control>
           </Form.Group>
-          <Button type='submit'>Finalize</Button>     
+          <Button className='formOneButton' type='submit'>Finalize</Button>     
       </Form>
     );
   };

@@ -1,0 +1,134 @@
+/* ------------ Forms Stlyign ------------ */
+#chosenName {
+  font-family: 'Almendra', serif;
+  font-size: 3em;
+  color: #E2DED0;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.formLabel {
+  /* font-family: 'Almendra', serif; */
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: ivory;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Label {
+  margin-top: 1em;
+  /* font-family: 'Almendra', serif; */
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: ivory;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.formControl {
+  background-color: whitesmoke !important;
+  font-family: 'Nanum Myeongjo', serif;
+  box-shadow:#260707c3 0px 0px 8px;
+}
+
+
+.form2Label {
+  /* font-family: 'Almendra', serif; */
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#form3Notice {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.75em;
+  color: #E2DED0;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1em;
+}
+
+.form3Score {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: #260707c3 -2px 2px 4px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Str {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(255, 0, 0, 0.50) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Dex {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(255, 255, 0, 0.45) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Con {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(255, 166, 0, 0.503) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Int {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(0, 0, 255, 0.503) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Wis {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(0, 128, 0, 0.503) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form3Cha {
+  margin-right: 1.5em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.5em;
+  color: #E2DED0;
+  text-shadow: rgba(128, 0, 128, 0.517) -1px 1px .5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.formOneButton {
+  font-size: 1.25em;
+  font-family: 'Almendra', serif;
+  color: #E2DED0;
+  background-color: #69171a;
+  border: solid black 2px;
+  border-radius: 5px 5px;
+  box-shadow: 0px 0px 4px black;
+}
+
+.formOneButton:hover {
+  color: #9f2a2d;
+  background: #E2DED0;
+  border: solid black 2px;
+
+}
