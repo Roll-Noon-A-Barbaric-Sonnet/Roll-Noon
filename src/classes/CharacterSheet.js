@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/CharacterMenu.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import ListGroup from 'react-bootstrap/ListGroup';
 import axios from 'axios';
@@ -17,6 +16,8 @@ class CharacterSheet extends React.Component {
   }
 
   async componentDidMount() {
+    // Since this retrieves its data on componentDidMount, it has no way of updating itself when the prop for which char is displayed gets updated.
+    // You'd need to use didReceiveProps, or even better, make this get request in CharacterMenu.js and pass down the results instead.
     const config = await this.props.config();
     console.log('config:', config);
     const oneChar = await axios.get(`${process.env.REACT_APP_SERVER}/characters/${this.props.mongid}`, config);
@@ -26,8 +27,10 @@ class CharacterSheet extends React.Component {
 
   render() {
     console.log('sheetData:', this.state.charData);
+    let abilities = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
     return (
-      this.state.charData.name ?
+      // if I don't have a name, I can't see the data?? that is sad
+      this.state.charData.level?
         <>
           <Card style={{ width: '18rem' }}>
             <Card.Body className='topCard'>
@@ -43,43 +46,24 @@ class CharacterSheet extends React.Component {
             <Card.Title>Ability Scores</Card.Title>
             <Table striped bordered hover>
               <thead>
+                {/* let's make this hurt less */}
                 <tr>
                   <th class='asTitle'>Stat</th>
-                  <th class='asTitle'>Str</th>
-                  <th class='asTitle'>Dex</th>
-                  <th class='asTitle'>Con</th>
-                  <th class='asTitle'>Int</th>
-                  <th class='asTitle'>Wis</th>
-                  <th class='asTitle'>Cha</th>
+                  {abilities.map(ab => <th class="asTitle">{ab}</th>)}
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class='tableTitle'>Score</td>
-                  <td class='as'>{this.state.charData.statBlock[0].str}</td>
-                  <td class='as'>{this.state.charData.statBlock[0].dex}</td>
-                  <td class='as'>{this.state.charData.statBlock[0].con}</td>
-                  <td class='as'>{this.state.charData.statBlock[0].int}</td>
-                  <td class='as'>{this.state.charData.statBlock[0].wis}</td>
-                  <td class='as'>{this.state.charData.statBlock[0].cha}</td>
+                  {abilities.map(ab => <td class='as'>{this.state.charData.statBlock[0][ab.toLowerCase()]}</td>)}
                 </tr>
                 <tr>
                   <td class='tableTitle'>Mod</td>
-                  <td class='as'>{this.state.charData.statBlock[1].str}</td>
-                  <td class='as'>{this.state.charData.statBlock[1].dex}</td>
-                  <td class='as'>{this.state.charData.statBlock[1].con}</td>
-                  <td class='as'>{this.state.charData.statBlock[1].int}</td>
-                  <td class='as'>{this.state.charData.statBlock[1].wis}</td>
-                  <td class='as'>{this.state.charData.statBlock[1].cha}</td>
+                  {abilities.map(ab => <td class='as'>{this.state.charData.statBlock[1][ab.toLowerCase()]}</td>)}
                 </tr>
                 <tr>
                   <td class='tableTitle'>Save</td>
-                  <td class='as'>{this.state.charData.statBlock[2].str}</td>
-                  <td class='as'>{this.state.charData.statBlock[2].dex}</td>
-                  <td class='as'>{this.state.charData.statBlock[2].con}</td>
-                  <td class='as'>{this.state.charData.statBlock[2].int}</td>
-                  <td class='as'>{this.state.charData.statBlock[2].wis}</td>
-                  <td class='as'>{this.state.charData.statBlock[2].cha}</td>
+                  {abilities.map(ab => <td class='as'>{this.state.charData.statBlock[2][ab.toLowerCase()]}</td>)}
                 </tr>
               </tbody>
             </Table>
@@ -95,7 +79,7 @@ class CharacterSheet extends React.Component {
             </ListGroup>
           </Card>
           {
-            this.state.charData?.spellcasting ?
+            this.state.charData.spellcasting ?
             <Card>
             <Card.Body>
               <Card.Text className='spellCasting'>{this.state.charData.spellcasting.spellcasting_ability.name}</Card.Text>
@@ -107,6 +91,7 @@ class CharacterSheet extends React.Component {
               </thead>
                 <tr>
                   <td class='tableTitle'>Score</td>
+                  {/* The fact that this always shows str is very sad */}
                   <td class='as'>{this.state.charData.statBlock[0].str}</td>
                 </tr>
               </Table>
