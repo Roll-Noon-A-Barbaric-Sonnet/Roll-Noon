@@ -31,7 +31,10 @@ class CharacterMenu extends React.Component {
     return oneChar.data;
   }
 
+  // this code for showing/hiding the sheet makes it seem like you intended for this to be a modal.
+  // but right now, there's no way to close a sheet or to update which character is displayed once you've clicked on one character.
   view = (id) => {
+    // You also need to call getOneChar here, so that if the user clicks view on another character, it gets the info about that character and saves it into the state.
     this.setState({
       sheetId: id,
       sheet: true
